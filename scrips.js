@@ -3,7 +3,12 @@ let getContainermb=document.querySelector('.container-moblie')
 let getMenumb=document.querySelector('.nav__menu-moblie')
 let getBody=document.querySelector('.test')
 let getClose=document.querySelector('.icon-close')
-
+let geticonRight=document.querySelectorAll(".icon-right")
+let geticonLeft=document.querySelector(".icon-left")
+let getLanding=document.querySelector("#landing")
+let getPages=document.querySelector(".nav__menu__item--pages")
+let getlistMb=document.querySelectorAll(".list__menu-moblie")
+let getlistmbItem=document.querySelectorAll("list__menu-item")
 geticonMenu.onclick=(e)=>{
 	// getContainermb.classList.toggle('show')
 	getMenumb.classList.add('slide')
@@ -14,29 +19,33 @@ geticonMenu.onclick=(e)=>{
 	getBody.classList.remove('show')
 	}
 	getBody.onclick=(e)=>{
-			// let boolen=0;
-			// for(let i=0;i<getMenumb.children.length;i++){
-			// 			if(e.target==getMenumb.children[i]){
-			// 				boolen=1;
-			// 			}
-			// 			else{
-			// 				boolen=0;
-			// 			}
-			// }
-			// console.log(boolen)
-			if(e.target.tagName=='LI'||e.target.tagName=='UL'||e.target.tagName=='A'){
-				// getMenumb.classList.remove('slide')
-				// getBody.classList.remove('show')
-				return ;
-			}
-			else{
-				getMenumb.classList.remove('slide')
-				getBody.classList.remove('show')
-			}
-
+		if(e.target.tagName=="LI"||e.target.tagName=="A"||e.target.tagName=="ION-ICON"||e.target.tagName=="UL"||e.target.className=="name"){
+		
+			return;
+		}
+		else{
+		getMenumb.classList.remove('slide')
+		getBody.classList.remove('show')
+		
+		}		
 	}
 	
-}	
+		
+	getMenumb.onclick=(e)=>{
+		if(e.target.id=="landing"||e.target.tagName=="ION-ICON"){
+		geticonLeft.style.opacity="1"
+		geticonLeft.style.visibility="visible"
+		getlistMb[0].classList.add("showlistMB")
+		}
+		 if(e.target.id=="icon-left"&&e.target.tagName=="ION-ICON"){
+			getlistMb[0].classList.remove("showlistMB")
+			geticonLeft.style.opacity="0"
+		}
+	}
 
-// .container-moblie
-// .nav__menu-moblie
+
+	
+}
+
+let getItem=document.querySelector('.nav__menu__item')
+
