@@ -7,7 +7,7 @@
 	--colorMain:#1d263a;
 };
 img{
-	max-width: 100%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
@@ -29,8 +29,8 @@ html{
 	scroll-behavior: smooth;
 }
 body{
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	/*margin:0;*/
 	/*padding: 0;*/
 	overflow: auto;
@@ -128,7 +128,7 @@ nav .nav__menu .menu__child-one ul li{
 	text-align: left;
 	transition: opacity .8s linear,visibility .2s linear, transform 1s linear;
 }
-.landing-page:hover  .menu__child-one ul li{
+.landing-page:hover > .menu__child-one ul li{
 	transform: translateY(0);
 	opacity: 1;
 	visibility: visible;
@@ -346,92 +346,67 @@ display: flex;
 
 }
 
+
+
 /*OUR STORY START*/
-.our-story{
-	display: block;
-	margin-top: 70px;
+.our__story{
 width: 100%;
+height: 100%;
 }
- .our-story .introduction{
- 	width: 100%;
- 	margin:0 auto;
- 	display: flex;
- 	justify-content: center;
- }
- .group-introduction{
- 	width: 70%;
- 	display: flex;
- 	flex-direction: column;
- 	justify-content: center;
- 	align-items: center;
- }
- .introduction__title{
- 	text-align: center;
- 	font-size: 60px;
- 	font-weight: 600;
- 	color:var(--colorMain);
- }
- .introduction__p{
- 	/*width:60%;*/
- 	/*text-align: center;*/
- 	font-size: 21px;
- 	font-weight: 400;
- 	 color:var(--colorMain);
- 	 opacity: 0.8;
- 	 letter-spacing: 1px;
- 	 z-index: -1;
- 	 margin-top: 35px;
- 	 display: block;
- 	 /*margin: 20px auto;*/
- }
- .group__img{
- 	width: 100%;
- 	height: 100%;
- 	position: relative;
- 	margin-top: 70px;
-
- }
-.group__img img{
-	width: 100%;
-	height: 100%;
-	border-radius: 40px;
-
+.introduction{
+width: 60%;
+margin: 0 auto;
 }
-.img__p{
-	width: 70%;
-	position: absolute;
-	padding: 35px 30px;
-	background-color: #ff794d;
-	bottom: 0;
-	border-radius: 0 40px;
+.introduction__title{
+	font-size: 60px;
+	color:var(--colorMain);
+	text-align: center;
+}
+.introduction__p{
 	font-size: 21px;
+	line-height: 32px;
+	opacity: 0.7;
+	text-align: center;
+}
+/*OUR STORY END*/
+/*INTRODUCTION IMAGE START*/
+.introduction__img{
+width: 100%;
+height: auto;	
+display: inline-block;
+
+}
+.introduction__img img{
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 40px;
+	/*border-radius: 40px 40px 0 0;*/
+}
+.introduction__img__p{
+	width: 80%;
+	height: 50%;
+	display:block;
 	color: white;
+	font-size: 22px;
+	line-height: 32px;
+	background-color: red;
+	padding: 30px;
+	border-radius: 0  40px 0 40px;
+	border-radius: 0  0 40px 40px;
+	background-color: #ff794d;
+	position: relative;
+	/*top: -5px;*/
+	bottom: 128px;
 }
-/*blog start*/
-.blog{
-	width: 100%;	
-	margin-top: 110px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-.blog__item{
-	width: 50%;
-	display: flex;
-	padding-bottom: 20px;
-}
-.blog__item img{
-/*width: 20%;*/
-}
-.blog__item p{
-	padding-left: 30px;
-	font-size: 17px;
-	font-weight: 400;	
-	opacity: 0.8;
-	line-height: 28px;
-	flex: 1;
-}
-/*blog end*/
+
+
+
+/*INTRODUCTION IMAGE END
+
+
+
 /*Banner start*/
 .banner{
 	display: flex;
@@ -461,7 +436,7 @@ width: 100%;
 	font-size: 60px;
 }
 /*Banner end*/
-/*OUR STORY END*/
+
 
 
 
@@ -499,8 +474,9 @@ width: 100%;
 	left: 0;
 }
 
-
 /*item nav mobile end*/
+
+
 
 /*Responsive start*/
 
@@ -508,16 +484,7 @@ width: 100%;
 .container{
 	width: 90%;
 }
-.group-introduction{
-	width: 75%;
-}
-.introduction__p{
-	text-align: center;
-}
-.img__p{
-	width: 80%;
-	padding: 30px 20px;
-}
+
 }
 
 @media (min-width: 450px)and (max-width: 768px){
@@ -535,26 +502,21 @@ width: 100%;
 		display: block;
 	}
 	/*itroduction*/
-	.introduction__p{
-		width: 80%;
-	}
-	.group__img .introduction__p{
-		left: 0;
-		top:0;
-	}
-	.group-introduction{
-	width: 80%;
-}
-.introduction__p{
-	text-align: center;
-}
-.img__p{
-	bottom: -120px;
-	top: 100%;
-	width: 100%;
-	padding: 30px 20px;
-}
+	.introduction__img{
+width: 100%;
+height: auto;	
+display: inline-block;
 
+}
+.introduction__img img{
+	
+	border-radius: 40px 40px 0 0;
+}
+.introduction__img__p{
+	width: 100%;
+	bottom: 5px;
+}
+/*end*/
 	}
 
 @media (max-width: 450px){
@@ -570,13 +532,19 @@ width: 100%;
 	.test{
 		display: block;
 	}
-	.nav__menu-moblie{
-		width: 85%;
-	}
-
-	.introduction__p{
+	.introduction{
 		width: 100%;
 	}
+	.introduction__img img{
+	
+	border-radius: 40px 40px 0 0;
+}
+.introduction__img__p{
+	width: 100%;
+	bottom: 5px;
+}
+	
+/*end*/
 
 }
 @media (max-width: 320px){
