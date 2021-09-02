@@ -32,15 +32,25 @@ geticonMenu.onclick=(e)=>{
 	
 		
 	getMenumb.onclick=(e)=>{
-		if(e.target.id=="landing"||e.target.tagName=="ION-ICON"){
+		if(e.target.id=="landing"||e.target.id=="icon-right--landing"){
 		geticonLeft.style.opacity="1"
 		geticonLeft.style.visibility="visible"
 		getlistMb[0].classList.add("showlistMB")
 		}
-		 if(e.target.id=="icon-left"&&e.target.tagName=="ION-ICON"){
+		else if(e.target.id=="icon-left"&&e.target.tagName=="ION-ICON"){
 			getlistMb[0].classList.remove("showlistMB")
 			geticonLeft.style.opacity="0"
 		}
+		if(e.target.id=="pages"||e.target.id=="icon-right--pages"){
+		geticonLeft.style.opacity="1"
+		geticonLeft.style.visibility="visible"
+		getlistMb[1].classList.add("showlistMB")
+		}
+		else if(e.target.id=="icon-left"&&e.target.tagName=="ION-ICON"){
+			getlistMb[1].classList.remove("showlistMB")
+			geticonLeft.style.opacity="0"
+		}
+		
 	}
 
 
