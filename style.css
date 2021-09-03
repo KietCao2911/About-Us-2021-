@@ -436,7 +436,6 @@ line-height: 37px;
 font-size: 15px;
 color: var(--colorMain);
 opacity: 0.7;	
-/*text-align: center;*/
 }
 /*BLOG END */
 
@@ -453,6 +452,7 @@ opacity: 0.7;
 	padding: 20px 10px;
 	color: white;
 }
+
 .p {
 	display: flex;
 	flex-direction: column;
@@ -469,14 +469,81 @@ opacity: 0.7;
 .banner__item .number{
 	font-size: 60px;
 }
-/*Banner end*/
+/*BANNER END*/
 
+/*<!-- ABOUT MAIN START-->*/
+/*TITLE START*/
+.about__main{
+	margin-top: 260px;
+}
+.title{
+font-size: 60px;
+font-weight: bolder;
+color: var(--colorMain);
+text-align: center;
+}
 
+/*TITLE END*/
+
+.group__info{
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+	grid-gap: 5px;
+}
+.item{
+	position: relative;
+	overflow-y: hidden;
+}
+ .item img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 30px;	
+}
+
+/*PROFILE START*/
+.group-profile{
+	width: 95%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+	background-color: white;
+	border-radius: 10px;	
+	line-height: 22px;
+	justify-content: center;
+	transition: 0.5s linear;
+	bottom: -150px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.profile__name{
+color: var(--colorMain);
+}
+.profile__address{
+font-size: 13px;
+opacity: 0.7;
+}
+.profile__social{
+}
+.profile__social ion-icon:not(:last-child){
+	margin-right: 10px;
+}
+.group__info .item:hover  .group-profile{
+	bottom: 20px;
+}
+	
+/*PROFILE START*/
+
+/*<!-- ABOUT MAIN END-->*/
 
 
 
 /*catelogy for moblie end*/
 /*item nav mobile start*/
+
 .list__menu-moblie{
 	width: 100%;
 	height: 100%;
@@ -615,7 +682,8 @@ width: 100%;
 text-align: center;
 }
 /*BLOG END */
-	
+
+
 /*end*/
 
 }
