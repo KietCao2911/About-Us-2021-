@@ -30,13 +30,13 @@ html{
 }
 body{
 	width: 100%;
-	height: 100%;
+	height: auto;
 	/*margin:0;*/
 	/*padding: 0;*/
-	overflow: auto;
+	/*overflow: hidden;*/
 	overflow-x: hidden;
 	font-family: sans-serif;
-	
+	position: relative;
 	
 }
 .container{
@@ -250,19 +250,18 @@ transform: rotate(100deg);
 /*catelogy for moblie start*/
 
 .nav__menu-moblie{
-	position: absolute;
+	position: fixed;
 	/*background-color: red;*/
 	top: 0;
 	left: 0;
+	bottom: 0;
 	width: 42%;
 	height: 100%;
 	background-color: white;
 	transform: translateX(-100%);
 	transition: .5s ;
 	z-index: 9999;
-	overflow-x: hidden;
-	overflow-y: hidden;
-
+	overflow:hidden;
 }
 
 .slide{
@@ -273,8 +272,8 @@ a{
 }
 .test{
 	position: absolute;
-	width: 100vw;
-	height: 100vh;
+	/*width: 100%;*/
+	/*height: 100%;*/
 	opacity: 0;
 	visibility: hidden;
 	top: 0;
@@ -284,6 +283,7 @@ a{
 	z-index: 999;
 	transition: 0.5s linear;
 	display: none;
+	overflow: hidden;
 	}
 .show{
 	opacity: 1;
@@ -291,6 +291,7 @@ a{
 	background-color: rgba(0,0,0,0.3);
 
 }
+
 .nav__menu-moblie .nav__menu__item{
 	padding: 15px 10px;
 	height: 50px;
@@ -501,6 +502,10 @@ display: inline-block;
 	.test{
 		display: block;
 	}
+	.nav__menu-moblie{
+		width: 40%;
+	}
+
 	/*itroduction*/
 	.introduction__img{
 width: 100%;
@@ -531,6 +536,9 @@ display: inline-block;
 	}
 	.test{
 		display: block;
+	}
+	.nav__menu-moblie{
+		width: 100%;
 	}
 	.introduction{
 		width: 100%;
